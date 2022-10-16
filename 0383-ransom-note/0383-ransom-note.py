@@ -1,6 +1,5 @@
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-        dic={}
         if (len(ransomNote)==len(magazine)==1):
             return ransomNote==magazine
         elif (len(ransomNote)>len(magazine)):
