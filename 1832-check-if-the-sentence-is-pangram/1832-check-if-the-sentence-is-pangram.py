@@ -1,9 +1,8 @@
 class Solution:
     def checkIfPangram(self, sentence: str) -> bool:
-        ch=''
+        my_set=set()
         for i in range(len(sentence)):
-            if not (sentence[i] in ch):
-                ch+=sentence[i]
-        return len(ch)==26
+            my_set.add(sentence[i])
+        return len(my_set)==26
             
         
