@@ -14,8 +14,7 @@ class Solution:
         while pointer:
             copy = ListNode(pointer.val)
             copy.next = prev
-            prev = copy
-            
+            prev = copy 
             pointer = pointer.next
             
 
