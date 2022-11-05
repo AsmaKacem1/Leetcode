@@ -8,14 +8,11 @@ class Solution:
         if head==None:
             return head
         node1=head
-        node2=head.next
-        while node2:
-            if (node1.val==node2.val):
-                node2=node2.next
-                node1.next=node2
+        while node1.next:
+            if (node1.val==node1.next.val):
+                node1.next=node1.next.next
             else:
                 node1=node1.next
-                node2=node2.next
         return head
                 
                 
