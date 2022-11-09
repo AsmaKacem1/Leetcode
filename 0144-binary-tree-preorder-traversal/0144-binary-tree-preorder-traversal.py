@@ -7,8 +7,6 @@
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         L=[]
-        if root==None:
-            return L
         def inorder(root):
             if root:
                 if root.val!=None:
