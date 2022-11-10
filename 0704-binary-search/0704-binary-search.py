@@ -11,5 +11,3 @@ class Solution:
             else:
                 r=m
         return -1
-        
-        
