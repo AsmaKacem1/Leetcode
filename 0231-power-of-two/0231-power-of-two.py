@@ -1,8 +1,13 @@
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
-        if n<=0  :
-            return False
-        return math.floor( math.log2(n)) == math.ceil(math.log2(n))
+        check,i=1,1
+        while check<=n:
+            if check==n:
+                return True
+            
+            check=2**i
+            i+=1    
+        return False
  
         
             
