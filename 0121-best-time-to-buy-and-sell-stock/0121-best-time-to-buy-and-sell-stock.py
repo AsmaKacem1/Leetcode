@@ -6,8 +6,8 @@ class Solution:
         for i in range(1,len(prices)):
             if buy>prices[i]:
                 buy=prices[i]
-            else: 
-                res=max(res,prices[i]-buy)
+            
+            res=max(res,prices[i]-buy)
             sale=prices[i]
         return res
     
