@@ -5,13 +5,14 @@ class Solution:
         res=0
         for i in range(1,len(prices)):
             if buy>prices[i]:
-                sale=prices[i]
                 buy=prices[i]
-            if sale<prices[i]:
-                sale=prices[i]
-                res=max(res,sale-buy)
+            else: 
+                res=max(res,prices[i]-buy)
+            sale=prices[i]
         return res
-           
+    
+    
+   
             
             
             
