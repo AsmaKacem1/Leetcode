@@ -12,12 +12,11 @@ class Solution:
         while deque:
             for i in range(len(deque)):
                 node=deque.popleft()
-                if node:
-                    if node.left:
-                        deque.append(node.left)
-                    result+=node.val
-                    if node.right:
-                        deque.append(node.right)
+                if node.left:
+                    deque.append(node.left)
+                result+=node.val
+                if node.right:
+                    deque.append(node.right)
             if len(deque)!=0:
                 result=0
         return result 
