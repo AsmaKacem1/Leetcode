@@ -6,17 +6,23 @@
 #         self.right = right
 class Solution:
     def deepestLeavesSum(self, root: Optional[TreeNode]) -> int:
-        deque=collections.deque()
-        deque.append(root)
-        result=0
-        while deque:
-            for i in range(len(deque)):
-                node=deque.popleft()
-                if node.left:
-                    deque.append(node.left)
-                result+=node.val
-                if node.right:
-                    deque.append(node.right)
-            if len(deque)!=0:
-                result=0
-        return result 
+        depestLevel=0
+        somme=0
+     
+        def dfs(root,level):
+            nonlocal depestLevel, somme
+            if not root:
+                return
+            if depestLevel==level:
+                somme+=root.val
+            elif depestLevel<level:
+                depestLevel=level
+                somme=root.val
+            dfs(root.left,level+1) 
+            dfs(root.right,level+1)
+        dfs(root,0)
+        return somme
+            
+        
+
+       
